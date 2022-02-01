@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   run-shell-command:
-    runs-on: macOS
+    runs-on: macos-latest
     steps:
       - name: check node version
         run: |
