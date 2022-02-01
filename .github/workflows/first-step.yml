@@ -4,14 +4,14 @@ on: [push]
 
 jobs:
   run-mac-terminal-command:
-    runs-on: macos-lastest
+    runs-on: macos-11
     steps:
       - name: check node version
         run: |
           node -v
           npm -v
   run-after-mac-terminal-command:
-    runs-on: macos-lastest
+    runs-on: macos-11
     needs: ["run-mac-terminal-command"]
     steps:
       - name: log
