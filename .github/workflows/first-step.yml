@@ -16,4 +16,4 @@ jobs:
     steps:
       - name: log
         run: |
-          console.log("Mac terminal is done")
+          echo "Mac terminal is done"
