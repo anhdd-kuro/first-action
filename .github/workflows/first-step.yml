@@ -3,10 +3,17 @@ name: First Action
 on: [push]
 
 jobs:
-  run-shell-command:
+  run-mac-terminal-command:
     runs-on: macos-latest
     steps:
       - name: check node version
         run: |
           node -v
           npm -v
+  run-after-mac-terminal-command:
+    runs-on: macos-latest
+    needs: ["run-mac-terminal-command"]
+    steps:
+      - name: log
+        run: |
+          console.log("Mac terminal is done")
