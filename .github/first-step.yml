@@ -1,0 +1,12 @@
+name: First Action
+
+on: [push]
+
+jobs:
+  run-shell-command:
+    run-on: macos-latest
+    steps:
+      - name: check node version
+        run: |
+          node -v
+          npm -v
