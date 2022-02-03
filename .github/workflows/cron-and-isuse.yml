@@ -2,9 +2,9 @@ name: Cron Job With Issue
 
 on:
   schedule:
-    - cron: "0 * * * *"
-  # issues:
-  #   types: [opened,deleted,edited,transferred,pinned,unpinned,closed]
+    - cron: "20 * * * *"
+  issues:
+    types: [opened,deleted,edited,transferred,pinned,unpinned,closed]
 
 jobs:
   run-log:
