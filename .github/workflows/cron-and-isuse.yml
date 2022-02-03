@@ -2,7 +2,7 @@ name: Cron Job With Issue
 
 on:
   schedule:
-    - cron: "20 * * * *"
+    - cron: "0/15 * * * *"
   issues:
     types: [opened,deleted,edited,transferred,pinned,unpinned,closed]
 
