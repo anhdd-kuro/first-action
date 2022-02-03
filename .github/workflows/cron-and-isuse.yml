@@ -3,8 +3,8 @@ name: Cron Job With Issue
 on:
   schedule:
     - cron: "0 * * * *"
-  issues:
-    types: [opened,deleted,edited,transferred,pinned,unpinned,closed]
+  # issues:
+  #   types: [opened,deleted,edited,transferred,pinned,unpinned,closed]
 
 jobs:
   run-log:
@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: create log
         run: |
-          echo "${{ github.event_name }} ${{ github.event.action }}"
+          echo "${{ github.event_name }}"
