@@ -1,6 +1,8 @@
 name: Cron Job With Issue
 
 on:
+  schedule:
+    - cron: "* * * * *"
   issues:
     types: [opened,deleted,edited,transferred,pinned,unpinned,closed]
 
