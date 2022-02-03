@@ -1,0 +1,13 @@
+name: Cron Job With Issue
+
+on:
+  issues:
+    types: [opened,deleted,edited,transferred,pinned,unpinned,closed]
+
+jobs:
+  run-log:
+  runs-on: ubuntu-latest
+  steps:
+    - name: create log
+      run: |
+        echo "Issue ${{ github.event_name }}"
