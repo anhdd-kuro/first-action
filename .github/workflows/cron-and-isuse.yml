@@ -6,8 +6,8 @@ on:
 
 jobs:
   run-log:
-  runs-on: ubuntu-latest
-  steps:
-    - name: create log
-      run: |
-        echo "Issue ${{ github.event_name }}"
+    runs-on: ubuntu-latest
+    steps:
+      - name: create log
+        run: |
+          echo "Issue ${{ github.event_name }}"
