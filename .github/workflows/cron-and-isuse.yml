@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: create log
         run: |
-          echo "Issue ${{ github.event_name }}"
+          echo "${{ github.event_name }} ${{ github.event }}"
