@@ -20,7 +20,13 @@ jobs:
   run-another-repository-action:
     runs-on: [macos-11]
     steps:
-      - name: hello
+      - name: Show file
+        run: |
+          pwd
+          ls -a
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Show Files After Checkout
         run: |
           pwd
           ls -a
