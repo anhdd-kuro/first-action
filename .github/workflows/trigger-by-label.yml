@@ -12,11 +12,8 @@ jobs:
       - name: log
         uses: peter-evans/create-or-update-comment@v1
         with:
-          issue-number: 1
+          issue-number: ${{github.event.issue.number}}
           body: |
-            ${{github.event.issue.number}}
-            ${{github.event.issue.id}}
-            ${{github.event.issue.node_id}}
             ## Vue実装のTODO
             - [ ] 型定義の追加
             - [ ] StoryBook
