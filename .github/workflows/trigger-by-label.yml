@@ -12,9 +12,9 @@ jobs:
       - name: log
         uses: peter-evans/create-or-update-comment@v1
         with:
-          issue-number: github.event.issue.id
+          issue-number: 1
           body: |
-            ## Vue実装のTODO
+            ## Vue実装のTODO ${{github.event.issue.id}}
             - [ ] 型定義の追加
             - [ ] StoryBook
               - [ ] テンプレート
