@@ -12,7 +12,7 @@ jobs:
       - name: log
         uses: peter-evans/create-or-update-comment@v1
         with:
-          issue-number: ${{ github.issue.id }}
+          issue-number: 1
           body: |
             Todo list:
             [] check this
