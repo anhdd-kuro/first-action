@@ -7,13 +7,23 @@ on:
 jobs:
   add-comment:
     runs-on: ubuntu-latest
-    if: github.event.label.name == 'todo'
+    if: github.event.label.name == 'Vue実装'
     steps:
       - name: log
         uses: peter-evans/create-or-update-comment@v1
         with:
-          issue-number: 1
+          issue-number: github.event.issue.id
           body: |
-            Todo list:
-            [] check this
-          reactions: eyes
+            ## Vue実装のTODO
+            - [ ] 型定義の追加
+            - [ ] StoryBook
+              - [ ] テンプレート
+              - [ ] ドキュメント用story
+              - [ ] テスト用story
+            - [ ] Vue
+              - [ ] プロパティの追加
+              - [ ] マークアップ
+              - [ ] スタイル
+            - [ ] composition
+            - [ ] 現行の表示から変更を加える場合は結合試験書に変更点を記載する
+          reactions: rocket
